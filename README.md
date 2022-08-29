@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## hello-gnostr
 
 ### [https://github.com/gnostr-org/hello-gnostr.git](https://github.com/gnostr-org/hello-gnostr.git)
