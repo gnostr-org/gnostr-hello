@@ -1,11 +1,17 @@
 [package]
 name = "gnostr-hello"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
 homepage = "https://github.com/gnostr-org/gnostr-hello"
 repository = "https://github.com/gnostr-org/gnostr-hello.git"
 description = "gnostr-hello: extrememly simple async web service in rust"
+
+[package.metadata.wix]
+upgrade-guid = "0BF45EE7-C0F7-477A-8C61-3E26B4EB15F4"
+path-guid = "9D23609F-6B25-47B5-80F9-0B7D1622E38D"
+license = false
+eula = false
 ##REF: https://github.com/supertestnet/vanilla-js-nostr.git
 
 [[bin]]
@@ -30,7 +36,7 @@ cargo-dist-version = "0.14.1"
 # CI backends to support
 ci = "github"
 # The installers to generate for each app
-installers = ["shell", "powershell", "homebrew"]
+installers = ["shell", "powershell", "homebrew", "msi"]
 # A GitHub repo to push Homebrew formulas to
 tap = "gnostr-org/homebrew-gnostr-org"
 # Target platforms to build apps for (Rust target-triple syntax)

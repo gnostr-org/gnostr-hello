@@ -7,4 +7,4 @@ help:## 		help
 include cargo.mk
 include Makefile
 cargo-run: ## 		cargo run
-	cargo run
+	cargo run --bin gnostr-hello
