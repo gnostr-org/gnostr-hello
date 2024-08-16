@@ -151,7 +151,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
 
 [[package]]
-name = "hello-world"
+name = "hello-gnostr"
 version = "1.0.0"
 dependencies = [
  "hyper",
@@ -235,7 +235,7 @@ dependencies = [
 [[package]]
 name = "include_dir"
 version = "0.0.3"
-source = "git+https://github.com/RandyMcMillan/include_dir.git#ac7a79ac5ba1f025327dc58e2837d4417f14d65b"
+source = "git+https://github.com/gnostr-org/include_dir.git#ac7a79ac5ba1f025327dc58e2837d4417f14d65b"
 dependencies = [
  "glob",
  "hex-literal",
@@ -246,7 +246,7 @@ dependencies = [
 [[package]]
 name = "include_dir_macros"
 version = "0.0.3"
-source = "git+https://github.com/RandyMcMillan/include_dir.git#ac7a79ac5ba1f025327dc58e2837d4417f14d65b"
+source = "git+https://github.com/gnostr-org/include_dir.git#ac7a79ac5ba1f025327dc58e2837d4417f14d65b"
 dependencies = [
  "proc-macro2",
  "quote",

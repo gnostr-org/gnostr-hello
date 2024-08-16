@@ -1,12 +1,12 @@
 [package]
-name = "hello-world"
+name = "hello-gnostr"
 version = "1.0.0"
-authors = ["Aiden McClelland <me@drbonez.dev>"]
+authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+##REF: https://github.com/supertestnet/vanilla-js-nostr.git
 
 [dependencies]
 hyper = { version = "0.14.4", features = ["server", "http1", "http2", "tcp", "stream"] }
-include_dir = { version = "0.0.3", features = ["glob", "metadata"], git = "https://github.com/RandyMcMillan/include_dir.git" }
-# include_dir_macros = { git = "https://github.com/RandyMcMillan/include_dir.git", version = "0.0.3", features = ["metadata"] }
+include_dir = { version = "0.0.3", features = ["glob", "metadata"], git = "https://github.com/gnostr-org/include_dir.git" }
 tokio = { version = "1.4.0", features = ["full"] }
