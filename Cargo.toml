@@ -1,10 +1,14 @@
 [package]
-name = "hello-gnostr"
-version = "1.0.0"
+name = "gnostr-hello"
+version = "0.0.1"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
-
 ##REF: https://github.com/supertestnet/vanilla-js-nostr.git
+
+[[bin]]
+name = "gnostr-genkey"
+path = "src/genkey.rs"
+doc = true
 
 [dependencies]
 hyper = { version = "0.14.4", features = ["server", "http1", "http2", "tcp", "stream"] }
