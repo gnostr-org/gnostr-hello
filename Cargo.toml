@@ -1,6 +1,6 @@
 [package]
 name = "gnostr-hello"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
 homepage = "https://github.com/gnostr-org/gnostr-hello"
@@ -15,7 +15,7 @@ doc = true
 
 [dependencies]
 hyper = { version = "0.14.4", features = ["server", "http1", "http2", "tcp", "stream"] }
-include_dir = { version = "0.0.3", features = ["glob", "metadata"], git = "https://github.com/gnostr-org/include_dir.git" }
+include_dir = { version = "0.7.4", features = ["glob", "metadata"] }
 tokio = { version = "1.4.0", features = ["full"] }
 
 # The profile that 'cargo dist' will build with
