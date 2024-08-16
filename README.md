@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-## hello-gnostr
+## gnostr-hello: a simple async web service example
 
-### [https://github.com/gnostr-org/hello-gnostr.git](https://github.com/gnostr-org/hello-gnostr.git)
+### [https://github.com/gnostr-org/gnostr-hello.git](https://github.com/gnostr-org/gnostr-hello.git)
 
 
 <hr>
