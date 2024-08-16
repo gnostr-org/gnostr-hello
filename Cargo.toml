@@ -3,6 +3,9 @@ name = "gnostr-hello"
 version = "0.0.1"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
+homepage = "https://github.com/gnostr-org/gnostr-hello"
+repository = "https://github.com/gnostr-org/gnostr-hello.git"
+description = "gnostr-hello: extrememly simple async web service in rust"
 ##REF: https://github.com/supertestnet/vanilla-js-nostr.git
 
 [[bin]]
@@ -14,3 +17,27 @@ doc = true
 hyper = { version = "0.14.4", features = ["server", "http1", "http2", "tcp", "stream"] }
 include_dir = { version = "0.0.3", features = ["glob", "metadata"], git = "https://github.com/gnostr-org/include_dir.git" }
 tokio = { version = "1.4.0", features = ["full"] }
+
+# The profile that 'cargo dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+# Config for 'cargo dist'
+[workspace.metadata.dist]
+# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.14.1"
+# CI backends to support
+ci = "github"
+# The installers to generate for each app
+installers = ["shell", "powershell", "homebrew"]
+# A GitHub repo to push Homebrew formulas to
+tap = "gnostr-org/homebrew-gnostr-org"
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = ["x86_64-unknown-linux-gnu", "x86_64-unknown-linux-musl", "x86_64-pc-windows-msvc"]
+# Publish jobs to run in CI
+publish-jobs = ["homebrew"]
+# Publish jobs to run in CI
+pr-run-mode = "plan"
+# Whether to install an updater program
+install-updater = true

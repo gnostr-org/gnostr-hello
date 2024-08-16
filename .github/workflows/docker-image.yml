@@ -1,0 +1,28 @@
+name: docker-image.yml
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: install rustup
+      run: |
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    - name: cargo install cross
+      run: |
+        cargo install cross --git https://github.com/cross-rs/cross
+        #export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_MUSL_LINKER=aarch64-linux-gnu-gcc
+        #export CC=aarch64-linux-gnu-gcc
+        export PKG_CONFIG_ALLOW_CROSS=1
+        cross build --release #--target=aarch64-unknown-linux-musl
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag gnostr-hello:$(date +%s)
