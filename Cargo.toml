@@ -1,14 +1,14 @@
 [package]
 name = "gnostr-hello"
-version = "0.0.6"
+version = "0.0.7"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
 homepage = "https://github.com/gnostr-org/gnostr-hello"
 repository = "https://github.com/gnostr-org/gnostr-hello.git"
 description = "gnostr-hello: extrememly simple async web service in rust"
+license = "MIT"
 
 exclude = ["alt-index.html"]
-ignore = ["alt-index.html"]
 
 [package.metadata.wix]
 upgrade-guid = "0BF45EE7-C0F7-477A-8C61-3E26B4EB15F4"
