@@ -7,4 +7,6 @@ edition = "2018"
 
 [dependencies]
 hyper = { version = "0.14.4", features = ["server", "http1", "http2", "tcp", "stream"] }
+include_dir = { version = "0.0.3", features = ["glob", "metadata"], git = "https://github.com/RandyMcMillan/include_dir.git" }
+# include_dir_macros = { git = "https://github.com/RandyMcMillan/include_dir.git", version = "0.0.3", features = ["metadata"] }
 tokio = { version = "1.4.0", features = ["full"] }
