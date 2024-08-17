@@ -79,7 +79,7 @@ checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
 
 [[package]]
 name = "gnostr-hello"
-version = "0.0.7"
+version = "0.0.8"
 dependencies = [
  "hyper",
  "include_dir",

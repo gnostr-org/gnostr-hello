@@ -1,6 +1,6 @@
 [package]
 name = "gnostr-hello"
-version = "0.0.7"
+version = "0.0.8"
 authors = ["gnostr <admin@gnostr.org>"]
 edition = "2018"
 homepage = "https://github.com/gnostr-org/gnostr-hello"
